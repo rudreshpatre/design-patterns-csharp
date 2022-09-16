@@ -29,7 +29,7 @@ namespace Builder
              this._product.Add("PartC");
         }
 
-        public Product Build()
+        public Product GetProduct()
         {
             var result = this._product;
             this.Reset();
