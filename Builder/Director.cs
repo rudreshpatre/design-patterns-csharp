@@ -7,7 +7,6 @@ namespace Builder
         { 
             set{_builder = value;} 
         }
-
         public void BuildMinimalViableProduct()
         {
             this._builder.BuildPartA();

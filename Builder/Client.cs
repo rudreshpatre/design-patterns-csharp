@@ -30,6 +30,16 @@ namespace Builder
              builder.BuildPartA();
              builder.BuildPartC();
              Console.WriteLine(builder.GetProduct().ListParts());
+
+            Console.WriteLine();
+            Console.WriteLine("Create objects using Fluent Builder object");
+
+            var fluentBuilder = new FluentConcreteBuilder();
+            Console.WriteLine(fluentBuilder.BuildPartB()
+                                           .BuildPartC()
+                                           .BuildPartA()
+                                           .BuildPartB()
+                                           .GetProducts().ListParts());
              
         }
     }
