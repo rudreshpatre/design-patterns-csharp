@@ -12,4 +12,3 @@ e) Grade
 
 We can define a Specification for any of these properties and retrive a object or collection of object or 
 create a new object based on the Specification used.  
-
