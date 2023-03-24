@@ -8,6 +8,7 @@ var studentList = mngr.GetStudents();
 
 var studentOne = mngr.GetStudentsByName("Ramesh");
 var studentTwo = mngr.GetStudentsByAge(25);
+var studentThree = mngr.GetStudentsByCourse("Commerce");
 
 
 System.Console.WriteLine("END");
