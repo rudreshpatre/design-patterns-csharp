@@ -1,4 +1,6 @@
 
+using SimpleSpecification.Specifications;
+
 namespace SimpleSpecification
 {
     public class StudentManager
@@ -33,5 +35,19 @@ namespace SimpleSpecification
            return _students.Where(s => s.Course.Equals(course, StringComparison.OrdinalIgnoreCase))
                            .FirstOrDefault();
        }
-    }
+
+        public List<Student> GetStudentBySpecification(IStudentSpecification specification,
+                                                                IEnumerable<Student> _students)
+        {
+            List<Student> students = new List<Student>();
+            foreach (var student in _students)
+            {
+                if(specification.isSatisfiedBy(student))
+                {
+                    students.Add(student);
+                }
+            }
+            return students;
+        }
+  }
 }

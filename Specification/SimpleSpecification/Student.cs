@@ -1,3 +1,5 @@
+using SimpleSpecification.Specifications;
+
 namespace SimpleSpecification
 {
     public class Student
